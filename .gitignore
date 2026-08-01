@@ -1,2 +1,6 @@
 backend/.env
 backend/storage/chroma/
+.env
+*.env
+backend/.env
+dashboard/.env
