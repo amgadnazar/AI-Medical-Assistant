@@ -1,164 +1,373 @@
-<div align="center">
+# 🏥 Enterprise AI Medical Assistant Platform
 
-# 🏥 AI Medical Assistant Platform
+<p align="center">
+  <img src="docs/screenshots/hero.png" alt="AI Medical Assistant">
+</p>
 
-### Production-Ready AI-Powered Clinic Management Platform
-
-An intelligent healthcare platform that combines **Artificial Intelligence**, **WhatsApp Business Cloud API**, and a modern **Web Dashboard** to automate patient communication, appointment booking, and clinic management.
-
----
+<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwindcss)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini_AI-blue?logo=google)
 ![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?logo=supabase)
-![Gemini](https://img.shields.io/badge/Google-Gemini-blue)
-![WhatsApp](https://img.shields.io/badge/Meta-WhatsApp%20Cloud%20API-25D366?logo=whatsapp)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_DB-orange)
+![Sentence Transformers](https://img.shields.io/badge/SentenceTransformers-Embeddings-red)
+![WhatsApp Cloud API](https://img.shields.io/badge/Meta-WhatsApp_Cloud_API-25D366?logo=whatsapp)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-</div>
-
----
-
-# 📖 Overview
-
-AI Medical Assistant is a production-oriented SaaS platform designed to help clinics automate patient communication using artificial intelligence.
-
-Instead of relying on a human receptionist for every interaction, patients communicate directly with an AI-powered WhatsApp assistant capable of answering medical questions, providing clinic information, managing appointments, and maintaining conversation history.
-
-The platform includes a modern web dashboard that enables clinic administrators to manage doctors, patients, appointments, conversations, analytics, AI knowledge, and system settings from a single interface.
+</p>
 
 ---
 
-# ✨ Key Features
+# Enterprise AI Medical Assistant Platform
 
-## 🤖 Artificial Intelligence
+An enterprise-grade AI-powered medical assistant that enables hospitals and clinics to communicate with patients directly through **WhatsApp** using the official **Meta WhatsApp Cloud API**.
 
-- AI Medical Assistant powered by Google Gemini
-- Medical Question Answering
+The platform combines **Large Language Models (Google Gemini)**, **Retrieval-Augmented Generation (RAG)**, **semantic search**, **patient profile extraction**, **conversation memory**, and **clinic business logic** to provide an intelligent virtual medical receptionist capable of handling patient conversations, answering medical questions, managing clinic information, and assisting with appointment booking.
+
+Unlike typical chatbot projects, this system separates **AI reasoning** from **business logic**, ensuring that medical workflows remain deterministic, secure, and production-ready.
+
+---
+
+# Table of Contents
+
+- Project Overview
+- Key Features
+- Technology Stack
+- Why This Project
+- Project Architecture
+- Database Design
+- Backend Modules
+- AI Pipeline
+- System Sequence Diagram
+- Conversation Workflow
+- RAG Pipeline
+- AI Components
+- Dashboard Features
+- Installation
+- API Documentation
+- Screenshots
+- Current Capabilities
+- Roadmap
+- Contributing
+- License
+
+
+# Project Overview
+
+The platform consists of two major applications:
+
+- 🧠 AI Backend
+- 💻 Hospital Administration Dashboard
+
+The backend powers the AI assistant, WhatsApp communication, RAG pipeline, database operations, and clinic business logic.
+
+The Dashboard provides hospital administrators with complete control over patients, appointments, conversations, analytics, AI settings, medical knowledge, and system configuration.
+
+---
+
+# Key Features
+
+## 🤖 AI Medical Assistant
+
+- Google Gemini integration
 - Retrieval-Augmented Generation (RAG)
-- PDF Knowledge Base
-- Intelligent Intent Detection
-- Conversation Memory
-- Patient Profile Extraction
-- Context-Aware Responses
-- Structured Prompt Engineering
-- AI Response Validation
+- Medical document search
+- Semantic search
+- Medical question answering
+- Context-aware conversations
+- Conversation memory
+- Structured response validation
 
 ---
 
 ## 💬 WhatsApp Integration
 
-- Official Meta WhatsApp Business Cloud API
+- Official Meta WhatsApp Cloud API
+- Webhook handling
 - Interactive Buttons
-- Smart Menus
-- Appointment Booking
-- Appointment Cancellation
-- Conversation Tracking
-- Duplicate Message Protection
-- Automated AI Responses
+- Interactive Lists
+- Dynamic Menus
+- Quick Replies
+- Conversation State Machine
 
 ---
 
 ## 🏥 Clinic Management
 
-- Doctor Management
-- Patient Management
-- Appointment Scheduling
-- Appointment History
-- Conversation Management
-- Knowledge Base Management
-- Clinic Settings
-- AI Configuration
+- Clinic information
+- Doctors
+- Specialties
+- Services
+- Branches
+- Working hours
+- Pricing
+- Contact information
 
 ---
 
-## 📊 Dashboard
+## 👤 Patient Management
 
-- Real-Time Dashboard
-- Patients Module
-- Doctors Module
-- Conversations Module
-- Appointments Module
-- Analytics
-- Medical Knowledge Management
-- Clinic Configuration
+- Patient profiles
+- Automatic profile extraction
+- Conversation history
+- Medical history
+- Contact information
+- Patient details
 
 ---
 
-## 🧠 Knowledge Base
+## 📅 Appointment Management
 
-- Upload Medical PDF Files
-- Delete Knowledge Files
-- Rebuild AI Embeddings
-- Medical Document Search
-- Dynamic Knowledge Updates
-
----
-
-## 📈 Analytics
-
-- Patient Statistics
-- Appointment Statistics
-- Conversation Statistics
-- Dashboard Metrics
+- Appointment booking
+- Appointment availability
+- Appointment history
+- Patient appointments
+- Booking workflow
+- Business rule validation
 
 ---
 
-# 🚀 Main Capabilities
+## 📚 Medical Knowledge Base
 
-✔ AI Receptionist
-
-✔ WhatsApp Chatbot
-
-✔ Appointment Booking
-
-✔ AI Medical Question Answering
-
-✔ Patient Profiles
-
-✔ Doctor Management
-
-✔ Medical Knowledge Base
-
-✔ Conversation History
-
-✔ Dashboard Analytics
-
-✔ Modern Admin Dashboard
-
-✔ Modular Backend Architecture
-
-✔ Production-Ready Design
+- PDF ingestion
+- Medical document indexing
+- ChromaDB vector database
+- Sentence Transformers embeddings
+- Context retrieval
+- Knowledge search
 
 ---
 
-# 🖥 Dashboard Modules
+## 📊 Analytics
 
-- Dashboard
+- Dashboard KPIs
+- Conversation statistics
+- Patient growth
+- Appointment analytics
+- Doctor performance
+- AI usage statistics
+
+---
+
+## ⚙️ Administration Dashboard
+
+- Modern React dashboard
+- Dark / Light mode
+- Responsive UI
+- Data tables
+- Charts
+- Settings management
+- Medical knowledge management
+- AI configuration
+- WhatsApp configuration
+
+---
+
+# Technology Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Backend | Python 3.13, FastAPI |
+| Frontend | React, TypeScript, Vite |
+| AI | Google Gemini |
+| Embeddings | Sentence Transformers |
+| Vector Database | ChromaDB |
+| Database | Supabase PostgreSQL + ChromaDB |
+| Messaging | Meta WhatsApp Cloud API |
+| Styling | TailwindCSS, shadcn/ui |
+| Charts | Recharts |
+| State Management | TanStack Query |
+| Validation | Pydantic, Zod |
+| HTTP Client | Axios |
+| ORM / Database Client | Supabase Python SDK |
+
+---
+
+# Why This Project?
+
+Traditional chatbot systems rely almost entirely on an LLM for every user request.
+
+This platform follows a different architecture.
+
+Instead of allowing the AI model to make business decisions, the backend acts as the primary decision engine.
+
+The AI is only used when reasoning or medical understanding is required.
+
+This approach provides:
+
+- Faster responses
+- Lower AI costs
+- Better reliability
+- Deterministic business logic
+- Production-ready architecture
+- Reduced hallucinations
+
+Most user requests never reach the LLM.
+
+Instead, they are handled directly by backend services using clinic data and predefined workflows.
+
+# Architecture Principles
+
+The platform was designed around several engineering principles:
+
+- Feature-based modular architecture
+- Clear separation between AI and business logic
+- Deterministic backend workflows
+- AI used only when reasoning is required
+- Production-ready REST APIs
+- Scalable multi-module design
+- Clean dependency boundaries
+- Extensible AI pipeline
+- Future multi-clinic support
+
+# Project Architecture
+
+The project follows a modular, feature-based architecture designed for scalability and long-term maintainability.
+
+<p align="center">
+<img src="docs/screenshots/architecture.png">
+</p>
+
+```
+AI-Medical-Assistant/
+
+│
+├── backend/
+│   │
+│   ├── app/
+│   │
+│   ├── api/
+│   │      REST API Endpoints
+│   │
+│   ├── core/
+│   │      Configuration
+│   │
+│   └── modules/
+│
+│          ai/
+│          analytics/
+│          appointments/
+│          clinic/
+│          conversation/
+│          conversation_state/
+│          conversations/
+│          dashboard/
+│          database/
+│          intent/
+│          interactive/
+│          knowledge/
+│          message_tracker/
+│          patient_details/
+│          profile/
+│          rag/
+│          settings/
+│          whatsapp/
+│
+│
+├── dashboard/
+│
+│      React + TypeScript
+│
+│      Features
+│          Dashboard
+│          Patients
+│          Doctors
+│          Conversations
+│          Analytics
+│          Settings
+│          Medical Knowledge
+│
+│
+├── docs/
+│
+└── README.md
+```
+
+---
+
+## Repository Structure
+
+| Folder | Description |
+|---------|-------------|
+| backend | FastAPI backend application |
+| dashboard | React administration dashboard |
+| docs | Documentation and screenshots |
+| backend/app/modules | Feature modules |
+| backend/knowledge | Medical knowledge base |
+| backend/chromadb | Vector database |
+
+# Database Design
+
+The platform uses PostgreSQL (Supabase) with a relational database designed for production healthcare workflows.
+
+Main entities include:
+
+- Clinics
+- Branches
+- Departments
 - Doctors
 - Patients
-- Appointments
 - Conversations
-- Analytics
-- Medical Knowledge
-- Settings
+- Appointments
+- Appointment Slots
+- Services
+- Offers
+- AI Settings
+- System Settings
+- Processed Messages
+
+<p align="center">
+<img src="docs/screenshots/database-erd.png" width="100%">
+</p>
 
 ---
 
-# 📱 WhatsApp Workflow
+# Backend Modules
 
-```text
+The backend is divided into independent feature modules.
+
+| Module | Description |
+|---------|-------------|
+| AI | AI orchestration and Gemini integration |
+| RAG | Retrieval-Augmented Generation pipeline |
+| WhatsApp | WhatsApp Cloud API integration |
+| Conversation | Conversation processing |
+| Conversation State | Conversation workflow management |
+| Profile | Patient profile extraction |
+| Intent | Intent classification |
+| Clinic | Clinic information |
+| Appointments | Appointment management |
+| Patients | Patient records |
+| Analytics | Dashboard analytics |
+| Knowledge | Medical document management |
+| Interactive | WhatsApp buttons & lists |
+| Dashboard | Dashboard APIs |
+| Settings | System settings |
+
+---
+
+# AI Pipeline
+
+The AI pipeline is designed to minimize unnecessary LLM usage.
+
+```
 Patient
 
 ↓
 
-WhatsApp Business Cloud API
+WhatsApp
 
 ↓
 
-FastAPI Backend
+Webhook
+
+↓
+
+Message Parser
 
 ↓
 
@@ -166,7 +375,7 @@ Conversation Processor
 
 ↓
 
-Intent Detection
+Intent Classifier
 
 ↓
 
@@ -174,15 +383,45 @@ Business Logic
 
 ↓
 
-AI Engine (Gemini + RAG)
+───────────────
+
+If Backend Knows Answer
 
 ↓
 
-Supabase Database
+Reply
+
+───────────────
+
+Else
 
 ↓
 
-AI Response
+Medical Context Builder
+
+↓
+
+Semantic Search
+
+↓
+
+ChromaDB
+
+↓
+
+Relevant Documents
+
+↓
+
+Prompt Builder
+
+↓
+
+Gemini AI
+
+↓
+
+Response Validator
 
 ↓
 
@@ -191,238 +430,72 @@ Patient
 
 ---
 
-# 🎯 Project Goals
+# AI Decision Engine
 
-- Automate clinic communication.
-- Reduce receptionist workload.
-- Improve appointment management.
-- Deliver intelligent AI-powered healthcare assistance.
-- Build a scalable healthcare SaaS platform.
-- Provide a production-ready architecture suitable for real clinics.
+Unlike conventional chatbots, the assistant does not immediately invoke an LLM.
 
----
+The backend first determines whether the request can be answered using deterministic logic.
 
-# 📸 Screenshots
-
-> Screenshots will be added here.
-
-### Dashboard
-
-![Dashboard](screenshots/01-dashboard.png)
-
-### Patients
-
-![Patients](screenshots/02-patients.png)
-
-### Conversations
-
-![Conversations](screenshots/03-conversations.png)
-
-### Appointments
-
-![Appointments](screenshots/04-appointments.png)
-
-### Medical Knowledge
-
-![Knowledge](screenshots/05-knowledge.png)
-
-### Settings
-
-![Settings](screenshots/06-settings.png)
-
----
-# 🏗 System Architecture
-
-The platform follows a modular and scalable architecture designed for production environments. Each module has a single responsibility, making the system easy to maintain, extend, and test.
+Decision order:
 
 ```text
-                            Patient
-                               │
-                               │
-                WhatsApp Business Cloud API
-                               │
-                               ▼
-                      FastAPI Backend
-                               │
-                               ▼
-                  Conversation Processor
-                               │
-          ┌────────────────────┴────────────────────┐
-          │                                         │
-          ▼                                         ▼
-   Intent Detection                         Button Handler
-          │                                         │
-          └────────────────────┬────────────────────┘
-                               ▼
-                        Business Logic
-                               │
-      ┌───────────────┬───────────────┬───────────────┐
-      ▼               ▼               ▼               ▼
- Patient DB      Appointment      Clinic Data     AI Engine
-                    Engine                            │
-                                                      ▼
-                                           RAG Knowledge Base
-                                                      │
-                                                      ▼
-                                                Google Gemini
-                                                      │
-                                                      ▼
-                                              AI Response
-                                                      │
-                                                      ▼
-                                              WhatsApp User
+Incoming Message
+
+↓
+
+Intent Classification
+
+↓
+
+Backend Knowledge?
+
+↓
+
+YES → Backend Response
+
+↓
+
+NO
+
+↓
+
+RAG Search
+
+↓
+
+Relevant Context Found?
+
+↓
+
+YES → Gemini
+
+↓
+
+NO
+
+↓
+
+Fallback Prompt
+
+↓
+
+Validated Response
 ```
 
----
+# System Sequence Diagram
 
-# 🧩 Backend Architecture
+The following diagram illustrates how a WhatsApp message flows through the system.
 
-The backend is built using a modular architecture where each feature is isolated into its own module.
-
-Each module contains:
-
-- Router
-- Service
-- Repository
-- Models (when needed)
-- Utilities
-
-This approach makes the project scalable and easy to maintain.
+<p align="center">
+<img src="screenshots/sequence-diagram.png" width="100%">
+</p>
 
 ---
 
-# 📂 Project Structure
+# Conversation Workflow
 
-```text
-AI-Medical-Assistant/
-
-backend/
-│
-├── app/
-│
-│   ├── api/
-│   │     └── v1/
-│   │
-│   ├── modules/
-│   │
-│   │     ├── ai/
-│   │     ├── analytics/
-│   │     ├── appointments/
-│   │     ├── clinic/
-│   │     ├── conversations/
-│   │     ├── dashboard/
-│   │     ├── database/
-│   │     ├── doctors/
-│   │     ├── intent/
-│   │     ├── knowledge/
-│   │     ├── message_tracker/
-│   │     ├── patient_details/
-│   │     ├── profile/
-│   │     ├── rag/
-│   │     ├── settings/
-│   │     ├── whatsapp/
-│   │
-│   ├── knowledge/
-│   ├── chroma_db/
-│   └── main.py
-│
-dashboard/
-│
-├── src/
-│
-│   ├── components/
-│   ├── features/
-│   ├── hooks/
-│   ├── layouts/
-│   ├── lib/
-│   ├── pages/
-│   ├── routes/
-│   └── types/
-│
-└── package.json
 ```
-
----
-
-# ⚙ Backend Technologies
-
-| Technology | Purpose |
-|------------|---------|
-| Python 3.13 | Backend Language |
-| FastAPI | REST API |
-| Uvicorn | ASGI Server |
-| Supabase | Database |
-| PostgreSQL | Relational Database |
-| Pydantic | Data Validation |
-| HTTPX | External API Requests |
-
----
-
-# 🤖 Artificial Intelligence Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Google Gemini | Large Language Model |
-| Sentence Transformers | Embeddings |
-| ChromaDB | Vector Database |
-| RAG | Medical Knowledge Retrieval |
-| Prompt Engineering | AI Context Building |
-
----
-
-# 🎨 Frontend Stack
-
-| Technology | Purpose |
-|------------|---------|
-| React | Frontend Framework |
-| TypeScript | Type Safety |
-| Vite | Build Tool |
-| TailwindCSS | Styling |
-| TanStack Query | Server State |
-| React Router | Routing |
-| Axios | API Requests |
-| Recharts | Analytics Charts |
-| React Hook Form | Forms |
-| Zod | Validation |
-
----
-
-# ☁ Cloud Services
-
-- Supabase
-- Meta WhatsApp Business Cloud API
-- Google Gemini API
-
----
-
-# 📦 Database
-
-Main tables used by the platform:
-
-- user_profiles
-- conversations
-- appointments
-- doctors
-- specialties
-- clinic_information
-- services
-- medical_documents
-- processed_messages
-
----
-
-# 🔐 Authentication
-
-- WhatsApp Phone Number Authentication
-- Clinic Administrator Authentication
-- Protected Dashboard Routes
-
----
-
-# 🧠 AI Workflow
-
-```text
-Patient Message
+Patient sends message
 
 ↓
 
@@ -434,299 +507,6 @@ Message Parser
 
 ↓
 
-Conversation Processor
-
-↓
-
-Intent Detection
-
-↓
-
-Business Logic
-
-↓
-
-Need AI?
-
- ├── No → Execute Business Logic
- │
- └── Yes
-      │
-      ▼
-
-Medical Context Builder
-
-↓
-
-RAG Search
-
-↓
-
-Prompt Builder
-
-↓
-
-Gemini
-
-↓
-
-Response Validator
-
-↓
-
-WhatsApp Reply
-```
-
----
-
-# 📈 Scalability
-
-The system was designed with scalability in mind.
-
-Supported architecture principles include:
-
-- Modular Design
-- Repository Pattern
-- Service Layer
-- REST API
-- Separation of Concerns
-- Feature-based Frontend
-- AI Isolation
-- Independent Business Modules
-
-Future modules can be added without affecting existing functionality.
-
-Examples:
-
-- Laboratory
-- Radiology
-- Pharmacy
-- Insurance
-- Payments
-- Notifications
-- Multi-Clinic Support
-- Multi-Tenant SaaS
-
----
-
-# 🔄 Data Flow
-
-```text
-User
-
-↓
-
-WhatsApp
-
-↓
-
-Webhook
-
-↓
-
-FastAPI
-
-↓
-
-Conversation Processor
-
-↓
-
-Intent Detection
-
-↓
-
-Business Logic
-
-↓
-
-Database
-
-↓
-
-AI (if needed)
-
-↓
-
-Response
-
-↓
-
-WhatsApp
-```
-# 🗄 Database Design
-
-The platform uses **Supabase PostgreSQL** as the primary relational database.
-
-Each table is responsible for a single business domain, making the database scalable and easy to maintain.
-
----
-
-## Main Tables
-
-### 👤 user_profiles
-
-Stores patient information.
-
-| Column | Description |
-|---------|-------------|
-| phone_number | Primary Identifier |
-| name | Patient Name |
-| age | Age |
-| gender | Gender |
-| blood_type | Blood Type |
-| allergies | Allergies |
-| chronic_diseases | Chronic Diseases |
-| medications | Current Medications |
-| height | Height |
-| weight | Weight |
-| created_at | Creation Date |
-
----
-
-### 💬 conversations
-
-Stores every WhatsApp conversation.
-
-| Column | Description |
-|---------|-------------|
-| id | Conversation ID |
-| phone_number | Patient Phone |
-| role | user / assistant |
-| message | Message Content |
-| created_at | Timestamp |
-
----
-
-### 📅 appointments
-
-Stores appointment bookings.
-
-| Column | Description |
-|---------|-------------|
-| id | Appointment ID |
-| patient_phone | Patient |
-| doctor_id | Doctor |
-| appointment_date | Date |
-| appointment_time | Time |
-| status | Pending / Confirmed / Cancelled |
-
----
-
-### 👨‍⚕️ doctors
-
-Stores doctors.
-
-| Column | Description |
-|---------|-------------|
-| id | Doctor ID |
-| full_name | Doctor Name |
-| specialty_id | Specialty |
-| branch_id | Clinic Branch |
-| available | Availability |
-
----
-
-### 🏥 specialties
-
-Medical specialties.
-
-Example:
-
-- Cardiology
-- Pediatrics
-- Dermatology
-- Orthopedics
-- Neurology
-
----
-
-### 🏢 clinic_information
-
-Stores clinic information.
-
-Example:
-
-- Clinic Name
-- Address
-- Working Hours
-- Emergency Number
-- Insurance Companies
-
----
-
-### 🩺 services
-
-Clinic services.
-
-Examples:
-
-- Consultation
-- X-Ray
-- Laboratory
-- Ultrasound
-
----
-
-### 📚 Medical Knowledge
-
-Medical PDFs are stored locally while embeddings are generated into ChromaDB for semantic search.
-
-Examples:
-
-- GINA Guidelines
-- GOLD COPD
-- WHO Diabetes
-- Clinical Protocols
-
----
-
-### 📨 processed_messages
-
-Stores processed WhatsApp message IDs to prevent duplicate webhook events.
-
----
-
-# 🔗 Database Relationships
-
-```text
-user_profiles
-      │
-      │ phone_number
-      ▼
-appointments
-      ▲
-      │ doctor_id
-      │
-doctors
-      │
-      ▼
-specialties
-```
-
----
-
-# 🤖 AI Pipeline
-
-Unlike traditional chatbots, the platform uses multiple processing stages before generating an AI response.
-
-```text
-Incoming WhatsApp Message
-
-↓
-
-Webhook
-
-↓
-
-Message Parser
-
-↓
-
-Conversation Processor
-
-↓
-
 Conversation State
 
 ↓
@@ -735,81 +515,61 @@ Intent Detection
 
 ↓
 
+Profile Extraction
+
+↓
+
 Business Logic
 
 ↓
 
-Need AI?
+Appointment Logic
 
-        │
-   ┌────┴────┐
-   │         │
-   │ No      │ Yes
-   │         │
-   ▼         ▼
+↓
 
-Database   Medical Context Builder
+Clinic Knowledge
 
-              ↓
+↓
 
-         RAG Retrieval
+Medical RAG
 
-              ↓
+↓
 
-       Prompt Builder
+Gemini (if required)
 
-              ↓
+↓
 
-       Google Gemini
+Response Validation
 
-              ↓
+↓
 
-     Response Validator
-
-              ↓
-
- Save Conversation
-
-              ↓
-
- Send WhatsApp Reply
+WhatsApp Reply
 ```
 
 ---
 
-# 🧠 Intent Detection
+# RAG Pipeline
 
-Every incoming message is classified before reaching the AI.
+The Retrieval-Augmented Generation pipeline consists of multiple stages.
 
-Examples include:
-
-- Greeting
-- Appointment Booking
-- Appointment Cancellation
-- Doctor Search
-- Clinic Information
-- Medical Question
-- General Conversation
-- Interactive Button
-- Unknown Intent
-
-This reduces unnecessary AI calls and improves performance.
-
----
-
-# 📚 Retrieval-Augmented Generation (RAG)
-
-The assistant does not rely solely on the language model.
-
-Instead, it retrieves medical information from trusted PDF documents.
-
-Workflow:
-
-Medical PDF
+```
+Medical PDFs
 
 ↓
 
-Embedding Generation
+Text Extraction
+
+↓
+
+Cleaning
+
+↓
+
+Chunking
+
+↓
+
+Embeddings
 
 ↓
 
@@ -829,530 +589,697 @@ Gemini
 
 ↓
 
-Accurate Response
-
----
-
-# 💬 Conversation Memory
-
-The assistant maintains conversation history for every patient.
-
-Capabilities include:
-
-- Previous conversations
-- Patient profile
-- Appointment history
-- Context-aware responses
-- Personalized replies
-
----
-
-# 📲 WhatsApp Features
-
-Supported features include:
-
-- Text Messages
-- Interactive Buttons
-- Smart Menus
-- Appointment Booking
-- AI Chat
-- Duplicate Message Protection
-- Conversation History
-
----
-
-# 🛡 Business Rules
-
-Business logic is separated from AI.
-
-The AI **never performs database operations directly**.
-
-Instead:
-
-- Backend validates requests
-- Business rules execute actions
-- Database is updated
-- AI generates only natural language responses
-
-This architecture ensures reliability and prevents AI hallucinations in critical workflows.
-
----
-
-# ⚡ Performance Optimizations
-
-The platform includes several optimizations:
-
-- Duplicate webhook detection
-- Modular services
-- Repository pattern
-- Cached embeddings
-- RAG retrieval
-- Intent-first processing
-- Reduced LLM usage
-- Efficient database queries
-
----
-
-# 🔄 Background Processing
-
-Heavy operations are isolated from the main request flow whenever possible.
-
-Examples include:
-
-- Embedding generation
-- Knowledge rebuilding
-- File uploads
-- Vector indexing
-
----
-
-# 📂 Medical Knowledge Workflow
-
-```text
-Upload PDF
-
-↓
-
-Knowledge Folder
-
-↓
-
-Rebuild Embeddings
-
-↓
-
-Sentence Transformers
-
-↓
-
-ChromaDB
-
-↓
-
-Ready for AI Search
+Medical Answer
 ```
 
 ---
 
-# 🏥 Real-World Use Cases
+# AI Components
 
-The platform can be used by:
+The AI module contains several specialized components.
 
-- Private Clinics
-- Medical Centers
-- Hospitals
-- Dental Clinics
-- Diagnostic Centers
-- Telemedicine Providers
+| Component | Responsibility |
+|------------|----------------|
+| Assistant | Main AI orchestrator |
+| Prompt Builder | Prompt generation |
+| Gemini Service | Gemini communication |
+| Context Builder | Medical context generation |
+| Profile Formatter | Patient profile formatting |
+| Response Parser | Structured output parsing |
+| Response Validator | AI response validation |
+| Repository | AI persistence |
+
+---
+
+# WhatsApp Features
+
+The system supports the official Meta WhatsApp Cloud API.
+
+Supported capabilities include:
+
+- Text messages
+
+- Interactive buttons
+
+- Interactive lists
+
+- Reply buttons
+
+- Dynamic menus
+
+- Webhook events
+
+- Conversation tracking
+
+- Button callbacks
+
+- List callbacks
+
+- Delivery status
+
+- Read receipts
 
 ---
 
-# 📈 Scalability
+# Dashboard Features
 
-The platform is designed to support:
+The administration dashboard includes multiple management panels.
 
-- Multiple Clinics
-- Thousands of Patients
-- Large Medical Knowledge Bases
-- AI Expansion
-- Additional Modules
-- Cloud Deployment
-- SaaS Multi-Tenant Architecture
+## Dashboard
+
+- KPIs
+- Appointment overview
+- Patient growth
+- Recent conversations
+- Daily appointments
 
 ---
-# 🚀 Installation
 
-## 1. Clone Repository
+## Patients
+
+- Patient table
+- Search
+- Filters
+- Patient profile
+- Appointment history
+- Conversation history
+
+---
+
+## Doctors
+
+- Doctor management
+- Availability
+- Specialties
+- Booking statistics
+
+---
+
+## Conversations
+
+- Live conversations
+- Patient messages
+- AI responses
+- Conversation timeline
+
+---
+
+## Analytics
+
+- Patient growth
+- Appointment trends
+- Doctor bookings
+- AI statistics
+- Conversation analytics
+
+---
+
+## Medical Knowledge
+
+- Upload PDFs
+- View documents
+- Delete documents
+- Rebuild embeddings
+
+---
+
+## Settings
+
+- Clinic settings
+- AI configuration
+- WhatsApp configuration
+- Database configuration
+- Backup settings
+- Danger Zone
+
+---
+
+# Security
+
+The platform follows several security practices:
+
+- Environment-based secret management
+- API key isolation
+- Server-side business validation
+- Webhook verification
+- Conversation tracking
+- Duplicate message protection
+- Input validation using Pydantic
+- Secure database access through Supabase
+
+# Installation
+
+## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Medical-Assistant.git
+git clone https://github.com/amgadnazar/AI-Medical-Assistant.git
 
 cd AI-Medical-Assistant
 ```
 
 ---
 
-## 2. Backend
+# Backend Setup
+
+Navigate to the backend directory.
 
 ```bash
 cd backend
+```
 
+Install the dependencies using **uv**.
+
+```bash
 uv sync
 ```
 
-Run the server
+Or using pip
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Configure Environment Variables
+
+Create a new environment file.
+
+```bash
+cp .env.example .env
+```
+
+Fill the required variables.
+
+Example:
+
+```env
+GEMINI_API_KEY=
+
+SUPABASE_URL=
+
+SUPABASE_KEY=
+
+WHATSAPP_ACCESS_TOKEN=
+
+WHATSAPP_PHONE_NUMBER_ID=
+
+WHATSAPP_VERIFY_TOKEN=
+
+MODEL_NAME=gemini-2.5-pro
+
+EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+```
+
+---
+
+# Run Backend
+
+Using uv
 
 ```bash
 uv run uvicorn app.main:app --reload
 ```
 
----
-
-## 3. Dashboard
+or
 
 ```bash
-cd dashboard
+uvicorn app.main:app --reload
+```
 
-npm install
+The backend will be available at
 
-npm run dev
+```
+http://localhost:8000
 ```
 
 ---
 
-## 4. Cloudflare Tunnel
+# Dashboard Setup
 
-Expose the local backend.
+Open a second terminal.
+
+```bash
+cd dashboard
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Run development server.
+
+```bash
+npm run dev
+```
+
+Dashboard URL
+
+```
+http://localhost:5173
+```
+
+---
+
+# Medical Knowledge Base
+
+Medical documents are stored inside
+
+```
+backend/knowledge/
+```
+
+Supported formats include
+
+- PDF
+
+- Medical Guidelines
+
+- Clinical Protocols
+
+- Research Papers
+
+---
+
+# Generate Embeddings
+
+After adding new medical documents, rebuild the vector database.
+
+```bash
+cd backend
+
+python ingest.py
+```
+
+The system automatically
+
+- extracts text
+
+- cleans content
+
+- creates chunks
+
+- generates embeddings
+
+- stores vectors in ChromaDB
+
+---
+
+# Configure WhatsApp Cloud API
+
+Create a Meta Developer application.
+
+Configure
+
+- WhatsApp Business Account
+
+- Phone Number
+
+- Access Token
+
+- Verify Token
+
+- Webhook
+
+Expose your local backend.
+
+Example using Cloudflare Tunnel
 
 ```bash
 cloudflared tunnel --url http://localhost:8000
 ```
 
-Update the Meta WhatsApp Webhook URL if the tunnel changes.
+Update the webhook URL inside Meta Developer Console.
 
----
+Example
 
-# ⚙ Environment Variables
-
-Create a `.env` file inside the backend.
-
-```env
-SUPABASE_URL=
-
-SUPABASE_KEY=
-
-GEMINI_API_KEY=
-
-WHATSAPP_TOKEN=
-
-PHONE_NUMBER_ID=
-
-VERIFY_TOKEN=
-
-HF_TOKEN=
+```
+https://your-tunnel-url/webhook
 ```
 
 ---
 
-# 📡 REST API
+# API Documentation
+
+FastAPI automatically generates interactive documentation.
+
+Swagger UI
+
+```
+http://localhost:8000/docs
+```
+
+Alternative documentation
+
+```
+http://localhost:8000/redoc
+```
+
+---
+
+# Main API Endpoints
+
+| Endpoint | Description |
+|-----------|-------------|
+| `/health` | Health Check |
+| `/webhook` | WhatsApp Webhook |
+| `/patients` | Patients |
+| `/appointments` | Appointments |
+| `/dashboard` | Dashboard |
+| `/analytics` | Analytics |
+| `/conversations` | Conversations |
+| `/knowledge` | Medical Knowledge |
+| `/settings` | Settings |
+| `/clinic` | Clinic Information |
+| `/ai` | AI Services |
+
+---
+
+# Development Workflow
+
+```
+Start Backend
+
+↓
+
+Start Dashboard
+
+↓
+
+Start Cloudflare Tunnel
+
+↓
+
+Update Meta Webhook
+
+↓
+
+Send WhatsApp Message
+
+↓
+
+Backend Processes Request
+
+↓
+
+Patient Receives Response
+```
+
+---
+
+# Screenshots
 
 ## Dashboard
 
-```
-GET /dashboard
-```
+<p align="center">
+<img src="docs/screenshots/dashboard-overview.png" width="100%">
+</p>
 
 ---
 
-## Patients
+## WhatsApp Conversation
 
-```
-GET /patients
-
-POST /patients
-```
+<p align="center">
+<img src="docs/screenshots/whatsapp-chat.png" width="100%">
+</p>
 
 ---
 
-## Patient Details
+## Patient Management
 
-```
-GET /patient-details/{phone}
-```
-
----
-
-## Conversations
-
-```
-GET /conversations
-
-GET /conversations/{phone}
-
-DELETE /conversations/{phone}
-
-DELETE /conversations/patient/{phone}
-```
-
----
-
-## Appointments
-
-```
-GET /appointments
-
-POST /appointments
-
-PATCH /appointments/{id}
-
-DELETE /appointments/{id}
-```
-
----
-
-## Clinic
-
-```
-GET /clinic
-
-PUT /clinic
-```
-
----
-
-## Knowledge
-
-```
-GET /knowledge/files
-
-POST /knowledge/upload
-
-POST /knowledge/rebuild
-
-DELETE /knowledge/files/{filename}
-```
+<p align="center">
+<img src="docs/screenshots/patients-management.png" width="100%">
+</p>
 
 ---
 
 ## Analytics
 
-```
-GET /analytics
-```
+<p align="center">
+<img src="docs/screenshots/analytics.png" width="100%">
+</p>
 
 ---
 
-## AI Settings
+## Medical Knowledge
 
-```
-GET /ai
-
-PUT /ai
-```
+<p align="center">
+<img src="docs/screenshots/medical-knowledge.png" width="100%">
+</p>
 
 ---
 
-## WhatsApp Settings
+## Database Design
 
-```
-GET /whatsapp
-
-PUT /whatsapp
-```
+<p align="center">
+<img src="docs/screenshots/database-erd.png" width="100%">
+</p>
 
 ---
 
-## Health
+## System Architecture
 
-```
-GET /health
-```
+<p align="center">
+<img src="docs/screenshots/architecture.png" width="100%">
+</p>
 
----
+## Appointment Management
 
-# 📁 Project Structure
-
-```text
-AI-Medical-Assistant
-
-backend/
-
-dashboard/
-
-knowledge/
-
-chroma_db/
-
-docs/
-
-README.md
-```
+<p align="center">
+<img src="docs/screenshots/appointments-management.png" width="100%">
+</p>
 
 ---
 
-# 📦 Main Dependencies
+## AI Conversations
 
-Backend
-
-- FastAPI
-- Uvicorn
-- Supabase
-- Google Gemini
-- Sentence Transformers
-- ChromaDB
-- Pydantic
-- httpx
-
-Frontend
-
-- React
-- TypeScript
-- Vite
-- TailwindCSS
-- TanStack Query
-- React Router
-- Shadcn UI
-- Recharts
-- Axios
+<p align="center">
+<img src="docs/screenshots/ai-conversations.png" width="100%">
+</p>
 
 ---
 
-# 🔒 Security
+## Settings
 
-Current implementation includes
+<p align="center">
+<img src="docs/screenshots/settings.png" width="100%">
+</p>
 
-- Environment Variables
-- API Layer Isolation
-- Backend Business Rules
-- Duplicate Message Protection
-- Request Validation
-- Input Validation
-- Secure WhatsApp Cloud API
+---
 
-Future improvements
+# Current Capabilities
+
+The platform currently supports:
+
+- AI-powered medical conversations
+
+- WhatsApp Business integration
+
+- Medical RAG
+
+- Patient profile extraction
+
+- Conversation history
+
+- Intent classification
+
+- Clinic information retrieval
+
+- Appointment workflow
+
+- Dashboard APIs
+
+- Medical document ingestion
+
+- Semantic document retrieval
+
+- Analytics
+
+- Patient management
+
+- Interactive WhatsApp menus
+
+- Doctor lookup
+
+- Settings management
+
+---
+
+# Design Goals
+
+The system is optimized for:
+
+- Low LLM usage
+- Fast response time
+- Reliable business workflows
+- Scalable architecture
+- Easy maintenance
+- Production deployment
+- High code readability
+- Future horizontal scaling
+
+# Roadmap
+
+The platform continues to evolve toward a complete AI-powered healthcare SaaS.
+
+## Phase 1
+
+- ✅ AI Assistant
+
+- ✅ Medical RAG
+
+- ✅ WhatsApp Integration
+
+- ✅ Dashboard
+
+- ✅ Conversation Engine
+
+---
+
+## Phase 2
 
 - Authentication
-- Role Based Access
-- Audit Logs
-- Rate Limiting
-- JWT Authentication
-- Multi-Tenant Security
+
+- Multi-clinic support
+
+- Role-based permissions
+
+- Advanced appointment scheduling
+
+- Doctor availability engine
+
+- Notification service
 
 ---
 
-# 📈 Future Roadmap
+## Phase 3
 
-The platform is continuously evolving.
+- Laboratory integration
 
-Planned modules include
+- Radiology module
 
-- Laboratory Module
-- Radiology Module
-- Pharmacy Module
-- Billing System
-- Online Payments
-- Doctor Dashboard
-- Patient Portal
-- Calendar Integration
-- Notifications
-- Email Support
-- Voice Assistant
-- Image Analysis
-- Medical Report Generation
-- AI Triage
-- Multi-language Support
-- Multi-clinic SaaS
-- Docker Deployment
-- Kubernetes Deployment
+- Pharmacy module
+
+- Payment gateway
+
+- Insurance integration
+
+- Calendar synchronization
 
 ---
 
-# 💡 Challenges Solved
+## Phase 4
 
-During development several real-world engineering challenges were solved.
+- Voice messages
 
-Examples include
+- Speech-to-text
 
-- WhatsApp duplicate webhook events
-- AI hallucination during appointment booking
-- Conversation state management
-- Medical knowledge retrieval
-- Prompt engineering
-- Intent classification
-- AI response validation
-- Scalable modular architecture
-- PDF knowledge indexing
-- Embedding regeneration
-- Patient profile extraction
-- Conversation memory
-- Dashboard integration
-- REST API design
+- Text-to-speech
+
+- Image understanding
+
+- OCR for medical reports
+
+- Medical document summarization
 
 ---
 
-# 📚 What I Learned
+## Phase 5
 
-This project significantly improved my practical experience in
+- Docker deployment
 
-- AI Engineering
-- Backend Development
-- FastAPI
-- Software Architecture
-- Clean Architecture
-- Repository Pattern
-- REST API Design
-- RAG Systems
-- Vector Databases
-- LLM Integration
-- Prompt Engineering
-- Database Design
-- React Development
-- Dashboard Development
-- SaaS Architecture
-- WhatsApp Cloud API
-- Production AI Systems
+- Kubernetes
+
+- CI/CD pipelines
+
+- Monitoring
+
+- Logging
+
+- Auto scaling
+
+- Cloud deployment
 
 ---
 
-# 📄 License
+# Contributing
 
-This project is intended for educational, research, and portfolio purposes.
+Contributions are welcome.
 
-Commercial use requires appropriate licensing depending on third-party services such as Meta WhatsApp Business Cloud API and Google Gemini.
+If you would like to improve the project:
+
+1. Fork the repository.
+
+2. Create a new feature branch.
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push the branch.
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request.
 
 ---
 
-# 👨‍💻 Author
+# License
 
-**Amjad Nazar**
+This project is released under the **MIT License**.
 
-AI Engineer • Backend Developer • Data Analyst
+Feel free to use, modify, and distribute it according to the license terms.
 
-📧 Email
+---
 
-amgadnazar11@gmail.com
+# Author
 
-💼 LinkedIn
+## Amgad Nazar
 
-https://linkedin.com/in/amjad-nazar
+AI & Machine Learning Engineer
 
-🌐 Portfolio
+Data Scientist
+
+Backend Developer
+
+### Portfolio
 
 https://amgadnazar.github.io/
 
-🐙 GitHub
+### GitHub
 
 https://github.com/amgadnazar
 
----
+### LinkedIn
 
-# ⭐ Support
-
-If you found this project useful:
-
-⭐ Star the repository
-
-🍴 Fork the project
-
-🐞 Report issues
-
-💡 Suggest improvements
-
-Contributions are always welcome.
+https://linkedin.com/in/amjad-nazar
 
 ---
 
-# 🙏 Acknowledgements
+# Support
 
-Special thanks to the open-source community and the technologies that made this project possible.
+If you find this project useful, consider giving it a ⭐ on GitHub.
 
-- FastAPI
-- React
-- Supabase
-- Google Gemini
-- ChromaDB
-- Sentence Transformers
-- TailwindCSS
-- Shadcn UI
-- TanStack Query
-- Meta WhatsApp Business Cloud API
+It helps others discover the project and supports future development.
+
+---
+
+<p align="center">
+
+### ⭐ Star the Repository
+
+If you enjoyed this project, don't forget to leave a star!
+
+Made with ❤️ using Python, FastAPI, Google Gemini, Supabase, ChromaDB, React, TypeScript, and the WhatsApp Cloud API.
+
+</p>
