@@ -1031,20 +1031,6 @@ Patient Receives Response
 
 ---
 
-## Database Design
-
-<p align="center">
-<img src="docs/screenshots/database-erd.png" width="100%">
-</p>
-
----
-
-## System Architecture
-
-<p align="center">
-<img src="docs/screenshots/architecture.png" width="100%">
-</p>
-
 ## Appointment Management
 
 <p align="center">
@@ -1272,7 +1258,6 @@ If you find this project useful, consider giving it a ⭐ on GitHub.
 
 It helps others discover the project and supports future development.
 
----
 
 <p align="center">
 
