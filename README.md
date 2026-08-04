@@ -1,4 +1,4 @@
-# 🏥 Enterprise AI Medical Assistant Platform
+#  Enterprise AI Medical Assistant Platform
 
 <p align="center">
   <img src="docs/screenshots/hero.png" alt="AI Medical Assistant">
